@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    margin: 0%;
+    width: 100%;
+    background-color: blanchedalmond;
+    
+}
+
+.menu {
+    background-color:burlywood;
+    padding: 2%;
+    height: 100vh;
+    width: 20%;
+}
+.tabs {
+    width: 100%;
+    text-align: left;
+    padding: 5%;
+    margin: 1%;
+}
+.tabs:hover {
+    background-color: rgb(177, 146, 106);
+}
+ul {
+    list-style-type: none;
+    padding-left: 0%;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+main {
+    width: 100%;
+}
+header {
+    margin: auto;
+    width: 80%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.add {
+    display: flex;
+    justify-content: space-between;
+    background-color: wheat;
+    box-shadow: 0 0 10px 5px burlywood;
+    padding: 3%;
+}
+section {
+    margin: auto;
+    width: 80%;
+}
+.addTask, .addCategory, .categories {
+    margin: auto;
+    background-color: wheat;
+    box-shadow: 0 0 10px 5px burlywood;
+    padding: 3%;
+    max-width: 500px;
+    box-sizing: border-box;
+}
+.categories {
+    margin-top: 30px;
+}
+input, select, textarea{
+    margin: auto;
+    width: 90%;
+    background-color: blanchedalmond;
+    border: 2px solid burlywood;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* estos los he copiado del user agent stylesheet para que no se modifique*/
+#color {
+    margin-top: 20px;
+    appearance: auto;
+    inline-size: 50px;
+    block-size: 27px;
+    cursor: default;
+    box-sizing: border-box;
+    border-width: 1px;
+    border-style: solid;
+    border-image: initial;
+    padding: 1px 2px;
+}
+#indexForm>#addJson, #indexForm>button {
+    width: 40%;
+    padding: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: wheat;
+    border-color: burlywood;
+    border-radius: 30px;
+}
+button:hover {
+    background-color: burlywood;
+}

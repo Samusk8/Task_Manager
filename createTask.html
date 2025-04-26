@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gestor de tareas">
+    <meta name="keywords" content="actividades">
+    <meta name="author" content="Samuel Jiménez">
+    <meta name="robots" content="index, robots">
+    <meta property="og:title" content="Tasks">
+    <title>Tasks</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <aside class="menu">
+        <div class="sidebar">
+            <h3>Menu</h3>
+            <nav class="nav">
+                <ul>
+                    <li class="tabs"><a href="index.html">Actividades</a></li>
+                    <li class="tabs"><a href="createTask.html">Crear actividad</a></li>
+                    <li class="tabs"><a href="categorys.html">Gestion de categorias</a></li>
+                </ul>
+            </nav>
+        </div>
+    </aside>
+    <main>
+        <section>
+            <h1>Crear nueva actividad</h1>
+            <div class="addTask">
+                <form action="">
+                    <label for="title">Titulo:</label>
+                    <input type="text" name="title" id="title">
+                    <label for="description">Descripcion:</label>
+                    <textarea name="description" id="description"> </textarea>
+                    <label for="date">Fecha:</label>
+                    <input type="date" name="date" id="date">
+                    <label for="category">Categoria:</label>
+                    <select name="category" id="category">
+                        <option value="">--</option>
+                    </select>
+                    <label for="priority">Prioridad:</label>
+                    <select name="priority" id="priority">
+                        <option value="baja">Baja</option>
+                        <option value="media">Media</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                    <button type="submit">Crear Actividad</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
