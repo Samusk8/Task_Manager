@@ -100,3 +100,18 @@ button {
 button:hover {
     background-color: burlywood;
 }
+.category {
+    display: flex;
+    justify-content: space-between;
+    background-color:burlywood;
+    border-radius: 10px;
+    padding: 3%;
+}
+
+#deleteCategory {
+    background-color: red;
+
+}
+#deleteCategory:hover {
+    background-color: darkred;
+}

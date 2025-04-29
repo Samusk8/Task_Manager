@@ -30,23 +30,29 @@
         <section>
             <h1>Crear nueva actividad</h1>
             <div class="addCategory">
-                <form action="">
+                <form>
                     <label for="category">Nueva categoria:</label>
                     <input type="text" name="category" id="category">
                     <label for="description">Descripcion:</label>
                     <input type="color" name="color" id="color"><br><br>
-                    <button type="submit">Añadir categoria</button>
                 </form>
+                <button type="submit" id="addCategoryBoton">Añadir categoria</button>
+                
             </div>
         </section>
         <section>
-            <div class="categories">
-
+            <div id="categoryContainer"  class="categories">
+                <!-- 
+                    <div class="category">
+                        <p>Estudios</p>
+                        <button id="deleteCategory">X</button>
+                    </div>
+                -->
             </div>
         </section>
-        
+
     </main>
-    <script src="js/Categorys.js"></script>
+    <script type="module" src="js/Index.js"></script>
 </body>
 
 </html>
