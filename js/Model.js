@@ -14,14 +14,16 @@ export class Category {
 
 // constructor actividad
 export class Activity {
-    name;
+    title;
     description;
     date;
     category;
-    constructor(name, description, date, category) {
-        this.name = name;
+    priority;
+    constructor(title, description, date, category, priority) {
+        this.title = title;
         this.description = description;
         this.date = date;
         this.category = category;
+        this.priority = priority
     }
 }

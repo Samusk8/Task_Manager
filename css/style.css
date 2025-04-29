@@ -52,7 +52,7 @@ section {
     margin: auto;
     width: 80%;
 }
-.addTask, .addCategory, .categories {
+.addTask, .addCategory, .categories, .activity {
     margin: auto;
     background-color: wheat;
     box-shadow: 0 0 10px 5px burlywood;
@@ -108,10 +108,36 @@ button:hover {
     padding: 3%;
 }
 
-#deleteCategory {
+#deleteCategory, #deleteActivity {
     background-color: red;
+    height: 40px;
 
 }
-#deleteCategory:hover {
+#deleteCategory:hover, #deleteActivity:hover {
     background-color: darkred;
+}
+
+.activities {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(20%, auto);
+    grid-gap: 30px;
+}
+.activity {
+    width: 100%;
+    background-color: wheat;
+
+}
+.activity-header, .activity-body, .body-boton {
+    display: flex;
+    justify-content: space-between;
+}
+.body-boton {
+    margin-bottom: 0;
+}
+
+#category1, #date, #description {
+    padding: 0;
+    margin: 0;
 }

@@ -30,7 +30,7 @@
         <section>
             <h1>Crear nueva actividad</h1>
             <div class="addTask">
-                <form action="">
+                <form>
                     <label for="title">Titulo:</label>
                     <input type="text" name="title" id="title">
                     <label for="description">Descripcion:</label>
@@ -39,7 +39,7 @@
                     <input type="date" name="date" id="date">
                     <label for="category">Categoria:</label>
                     <select name="category" id="category">
-                        <option value="">--</option>
+                        <option value="--">--</option>
                     </select>
                     <label for="priority">Prioridad:</label>
                     <select name="priority" id="priority">
@@ -47,12 +47,13 @@
                         <option value="media">Media</option>
                         <option value="Alta">Alta</option>
                     </select>
-                    <button type="submit">Crear Actividad</button>
                 </form>
+                <button type="submit" id="addTask">Crear Actividad</button>
             </div>
         </section>
 
     </main>
+    <script type="module" src="js/DomActivity.js"></script>
 </body>
 
 </html>
