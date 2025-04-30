@@ -114,7 +114,7 @@ button:hover {
 
 }
 #deleteCategory:hover, #deleteActivity:hover {
-    background-color: darkred;
+    background-color: darkgo;
 }
 
 .activities {

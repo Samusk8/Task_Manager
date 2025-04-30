@@ -1,3 +1,7 @@
+import { Storage } from "./Storage.js";
+
+const s = new Storage();
+
 export class FormTask {
     //pintar dom
 
@@ -21,6 +25,7 @@ export class FormTask {
     
                 //boton borrar categoria
                 categoryButton.addEventListener("click", () => {
+                    s.deleteCategory(category.name);
                     categoryDiv.remove();
                     intro.remove();
                 });
@@ -77,28 +82,51 @@ export class FormTask {
                 deleteActivity.id = "deleteActivity";
                 deleteActivity.innerText = "X";
 
+                /*let backgroundcolor;
+                switch (activity.priority) {
+                  case "Alta":
+                    backgroundcolor = "red";
+                    break;
+                  case "media":
+                    backgroundcolor = "yellow";
+                    break;
+                  case "baja":
+                    backgroundcolor = "green";
+                    break;
+                  default:
+                    backgroundcolor = "lightgray";
+                }
+                activityDiv.style.backgroundColor = backgroundcolor; */
+
                 if (activity.priority == "Alta") {
                     activityDiv.style.backgroundColor = "red";
-                } else if (activity.priority == "Media") {
+                } else if (activity.priority == "media") {
                     activityDiv.style.backgroundColor = "yellow";
-                } else if (activity.priority == "Baja") {
+                } else if (activity.priority == "baja") {
                     activityDiv.style.backgroundColor = "green";
                 }
 
                 done.addEventListener("change", () => {
                     if (done.checked) {
-                      activityDiv.style.backgroundColor = "darkred";
+                        if (activity.priority == "Alta") {
+                            activityDiv.style.backgroundColor = "darkred";
+                        } else if (activity.priority == "media") {
+                            activityDiv.style.backgroundColor = "darkgoldenrod";
+                        } else if (activity.priority == "baja") {
+                            activityDiv.style.backgroundColor = "darkgreen";
+                        }
                     } else {
                         if (activity.priority == "Alta") {
                             activityDiv.style.backgroundColor = "red";
-                        } else if (activity.priority == "Media") {
+                        } else if (activity.priority == "media") {
                             activityDiv.style.backgroundColor = "yellow";
-                        } else if (activity.priority == "Baja") {
+                        } else if (activity.priority == "baja") {
                             activityDiv.style.backgroundColor = "green";
                         }
                     }
                 });
-                
+
+
                 
                 const activitiesDiv = document.getElementById("actividades");
                 activitiesDiv.appendChild(activityDiv);
@@ -121,6 +149,7 @@ export class FormTask {
 
                 //borrar
                 deleteActivity.addEventListener("click", () => {
+                    s.deleteActivity(activity.title);
                     activityDiv.remove();
                 });
             });
