@@ -69,6 +69,7 @@ export class Storage {
             const archivo = `./data/${JSON}`;
             const resultaddo = await fetch(JSON);
             const activities = await resultaddo.json();
+            localStorage.setItem("activities", JSON.stringify());
             return activities;
         } catch (error) {
             console.error("No se han podido cargar las actividades", error);
