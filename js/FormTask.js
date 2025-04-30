@@ -76,7 +76,28 @@ export class FormTask {
                 const deleteActivity = document.createElement("button");
                 deleteActivity.id = "deleteActivity";
                 deleteActivity.innerText = "X";
-                
+
+                if (activity.priority == "Alta") {
+                    activityDiv.style.backgroundColor = "red";
+                } else if (activity.priority == "Media") {
+                    activityDiv.style.backgroundColor = "yellow";
+                } else if (activity.priority == "Baja") {
+                    activityDiv.style.backgroundColor = "green";
+                }
+
+                done.addEventListener("change", () => {
+                    if (done.checked) {
+                      activityDiv.style.backgroundColor = "darkred";
+                    } else {
+                        if (activity.priority == "Alta") {
+                            activityDiv.style.backgroundColor = "red";
+                        } else if (activity.priority == "Media") {
+                            activityDiv.style.backgroundColor = "yellow";
+                        } else if (activity.priority == "Baja") {
+                            activityDiv.style.backgroundColor = "green";
+                        }
+                    }
+                });
                 
                 
                 const activitiesDiv = document.getElementById("actividades");

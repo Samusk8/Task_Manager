@@ -18,7 +18,15 @@ export class Storage {
         let c = new Category(name, color); //Crear categoria c y pasar por el constructor
         this.categories.push(c); //añadir categoria al array
 
+        localStorage.setItem("categories", JSON.stringify(this.categories)); //subir categoria a Lo St
+
         console.log(this.categories); 
+        return c;
+    }
+
+    // recuperar categorias
+    getCategories() {
+        return this.categories;
     }
 
     // añadir actividad

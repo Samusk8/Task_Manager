@@ -2,6 +2,23 @@
 
 import { Storage } from "./Storage.js";
 
+//cargar las categorias del local storage al abrir la pag
+window.addEventListener("DOMContentLoaded", () => {
+  const categorias = storage.getCategories();
+  categorias.forEach(categoria => selectCategory(categoria));
+});
+
+const select = document.getElementById("category"); 
+
+function selectCategory(categoria) {
+  const option = document.createElement("option");
+  option.value = categoria.name;
+  option.textContent = categoria.name;
+  option.style.color = categoria.color;     
+  select.appendChild(option);
+}
+
+
 
 const storage = new Storage();
 

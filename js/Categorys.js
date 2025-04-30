@@ -11,4 +11,10 @@ document.getElementById("addCategoryBoton").addEventListener("click", () => {
     s.addCategory(name, color); //añadir categoria al array
     const f = new FormTask();
     f.printCategories(s.categories); //pintar categorias
+    if (s.categories) selectCategory(s.categories); //ponerlas en la pag de crear actividad
 });
+
+
+
+
+

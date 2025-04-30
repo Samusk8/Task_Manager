@@ -9,6 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
   ui.printActivities(storage.activities);
 });
 
+
+
 // esto lo he sacado por mis medios pero la ia me dio la idea y ayuda
 //ya que me salia un arror muy raro que no me encontraba el div donde meter el dom pero si que estaba
 // y con esto funcionó asi que no lo toco
