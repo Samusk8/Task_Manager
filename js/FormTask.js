@@ -11,8 +11,11 @@ export class FormTask {
             <p>Estudios</p>
             <button id="deleteCategory">X</button>
         </div>
-    */
-        printCategories(categories) {
+        */
+       printCategories(categories) {
+            const categoryContainer = document.getElementById("categoryContainer");
+           
+            categoryContainer.innerHTML = '';
             categories.forEach((category) => {
                 const categoryDiv= document.createElement("div");
                 categoryDiv.classList.add("category");
@@ -35,7 +38,6 @@ export class FormTask {
                 categoryDiv.appendChild(categoryP);
                 categoryDiv.appendChild(categoryButton);
 
-                const categoryContainer = document.getElementById("categoryContainer");
 
                 categoryContainer.appendChild(categoryDiv);
                 categoryContainer.appendChild(intro);

@@ -1,7 +1,7 @@
 // dom del apartado categorias
 
 
-import { Storage } from "../js/storage.js"; 
+import { Storage } from "../js/Storage.js"; 
 import {FormTask} from "./FormTask.js"; 
 
 const s = new Storage(); 
